@@ -45,6 +45,10 @@ Through this project, I practiced:
 
 ## Installation
 
+Requirements: Ruby 3.4.1, Bundler, and SQLite support. Browser-based system
+tests additionally require Chrome/Chromium and a compatible driver.
+
+
 Clone the repository:
 
 ```bash
@@ -67,10 +71,28 @@ bin/rails db:prepare
 Start the Rails server:
 
 ```bash
+bin/rails tailwindcss:build
 bin/rails server
 ```
 
 Then open `localhost:3000` in your browser.
+
+## Tests
+
+Run model, controller, integration and other non-system tests:
+
+```bash
+bin/rails test
+```
+
+Run browser-based system tests separately:
+
+```bash
+bin/rails test:system
+```
+
+The repository includes tests for products, carts, line items, orders,
+users, support requests, controllers, mailers and background jobs.
 
 ## Acknowledgements
 
@@ -78,4 +100,4 @@ This project is based on the Depot application developed throughout *Agile Web D
 
 ## Author
 
-Cristina Lazar
+Cristina Sevan
